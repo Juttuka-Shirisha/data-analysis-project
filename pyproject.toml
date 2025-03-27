@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "pubmed-fetcher"
+version = "0.1.0"
+description = "Fetches research papers from PubMed with non-academic authors."
+authors = ["Your Name"]
+license = "MIT"
+packages = [{ include = "pubmed_fetcher" }]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.31.0"
+pandas = "^2.1.4"
+
+[tool.poetry.scripts]
+get-papers-list = "cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
